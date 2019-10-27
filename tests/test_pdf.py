@@ -19,13 +19,13 @@
 """
 
 import unittest
-import sys
+import sys      #riconoscere il sistema operativo su cui stiamo lavorando
 
 import numpy as np
 from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
-if sys.flags.interactive:
-    plt.ion()
+if sys.flags.interactive:# il file python lo isola dalla cartella dove si trova lo script-> cosi puo essere importato forse
+    plt.ion()           #attiva la modalità interattiva
 
 from splrand.pdf import ProbabilityDensityFunction
 
@@ -112,5 +112,5 @@ class testPdf(unittest.TestCase):
 
 
 
-if __name__ == '__main__':
-    unittest.main(exit=not sys.flags.interactive)
+if __name__ == '__main__':      #perchè è piu funzionale avere un main?
+    unittest.main(exit=not sys.flags.interactive)       #perchè è cosi?
