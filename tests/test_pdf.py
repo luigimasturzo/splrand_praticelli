@@ -27,7 +27,7 @@ import matplotlib.pyplot as plt
 if sys.flags.interactive:# il file python lo isola dalla cartella dove si trova lo script-> cosi puo essere importato forse
     plt.ion()           #attiva la modalità interattiva
 
-from splrand.pdf import ProbabilityDensityFunction
+from splrand_praticelli.pdf import ProbabilityDensityFunction
 
 
 class testPdf(unittest.TestCase):
