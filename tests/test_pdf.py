@@ -24,8 +24,8 @@ import sys      #riconoscere il sistema operativo su cui stiamo lavorando
 import numpy as np
 from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
-if sys.flags.interactive:# il file python lo isola dalla cartella dove si trova lo script-> cosi puo essere importato forse
-    plt.ion()           #attiva la modalità interattiva
+if sys.flags.interactive:                                       # il file python lo isola dalla cartella dove si trova lo script-> cosi puo essere importato forse ////////// gli unitest li faccio al volo in background, se non lo voglio vedere non lo vedo: i dice se ho lanciato pithon con -i cioe interattiva, rimane nel terminale dopo il comando. serve a vedere se lho lancaito con -i
+    plt.ion()                                                   # attiva la modalità interattiva, manda la canvas da solo senza che gliela do io con plt.show()
 
 from splrand_praticelli.pdf import ProbabilityDensityFunction
 
@@ -113,4 +113,4 @@ class testPdf(unittest.TestCase):
 
 
 if __name__ == '__main__':      #perchè è piu funzionale avere un main?
-    unittest.main(exit=not sys.flags.interactive)       #perchè è cosi?
+    unittest.main(exit=not sys.flags.interactive)       #perchè è cosi?-> serve a forzarlo per non uscire dalla modalita interattiva

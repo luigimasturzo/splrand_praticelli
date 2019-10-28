@@ -1,0 +1,1 @@
+from splrand_praticelli.version import __version__
